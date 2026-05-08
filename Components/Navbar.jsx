@@ -212,52 +212,237 @@
 
 // export default Navbar;
 
+// "use client";
+
+// import Image from "next/image";
+// import Link from "next/link";
+// import { ChevronDown, Menu, X } from "lucide-react";
+// import { useState } from "react";
+// import Logo1 from "@/public/logo1.webp"
+
+// export default function Navbar() {
+//   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+//   return (
+//     <header className="w-full shadow-sm border-b border-gray-200">
+//       {/* Top Banner */}
+//       <div className="bg-green-500 text-white text-xs sm:text-sm md:text-base font-medium">
+//         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center gap-2 text-center">
+//           <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+//             📈
+//           </div>
+
+//           <p>
+//             Launching Inbound 360 | The tool behind our journey to 523 demos
+//             and a $1.5M pipeline.
+//           </p>
+//         </div>
+//       </div>
+
+//       {/* Navbar */}
+//       <nav className="bg-[#f4f4f4] relative z-50"  data-aos="fade-down">
+//         <div className="max-w-7xl mx-auto px-5 lg:px-8 h-[82px] flex items-center justify-between">
+//           {/* Logo */}
+//           <Link href="/" className="flex items-center gap-3">
+//             <div className="relative w-11 h-11 sm:w-12 sm:h-12">
+//               <div className="absolute top-0 left-0 w-5 h-5 sm:w-6 sm:h-6 bg-blue-600 rounded-tl-2xl rounded-br-2xl"></div>
+//               <div className="absolute top-0 right-0 w-3 h-3 sm:w-4 sm:h-4 bg-blue-600 rounded-md"></div>
+//               <div className="absolute bottom-0 left-0 w-3 h-3 sm:w-4 sm:h-4 bg-blue-600 rounded-md"></div>
+//               <div className="absolute bottom-0 right-0 w-5 h-5 sm:w-6 sm:h-6 bg-[#0c234a] rounded-tl-2xl rounded-br-2xl"></div>
+//             </div>
+
+//             <h1 className="text-3xl sm:text-4xl font-bold text-[#0c234a] tracking-tight">
+//               GoZen
+//             </h1>
+//           </Link>
+
+//           {/* Desktop Menu */}
+//           <div className="hidden lg:flex items-center gap-14">
+//             <button className="flex items-center gap-1 text-lg font-medium text-[#0c234a] hover:text-blue-600 transition">
+//               Products
+//               <ChevronDown size={18} />
+//             </button>
+
+//             <Link
+//               href="#"
+//               className="text-lg font-medium text-[#0c234a] hover:text-blue-600 transition"
+//             >
+//               Pricing
+//             </Link>
+
+//             <Link
+//               href="#"
+//               className="text-lg font-medium text-[#0c234a] hover:text-blue-600 transition"
+//             >
+//               Partners
+//             </Link>
+
+//             <button className="flex items-center gap-1 text-lg font-medium text-[#0c234a] hover:text-blue-600 transition">
+//               Resources
+//               <ChevronDown size={18} />
+//             </button>
+//           </div>
+
+//           {/* Desktop Buttons */}
+//           <div className="hidden lg:flex items-center gap-4">
+//             <button className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-7 py-3 rounded-2xl transition duration-300 shadow-md">
+//               Free Sign up
+//             </button>
+
+//             <button className="bg-[#0c234a] hover:bg-[#08172f] text-white text-lg font-semibold px-7 py-3 rounded-2xl transition duration-300 shadow-md">
+//               Login
+//             </button>
+
+//             {/* Language */}
+//             <div className="flex items-center gap-2 text-gray-700">
+//               <div className="w-7 h-7 rounded-full overflow-hidden border">
+//                 <Image
+//                   src={Logo1}
+//                   alt="English"
+//                   width={28}
+//                   height={28}
+//                   className="object-cover"
+//                 />
+//               </div>
+
+//               <span className="text-lg font-medium">EN</span>
+//             </div>
+//           </div>
+
+//           {/* Mobile Hamburger */}
+//           <button
+//             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+//             className="lg:hidden text-[#0c234a]"
+//           >
+//             {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+//           </button>
+//         </div>
+
+//         {/* Mobile Menu */}
+//         <div
+//           className={`lg:hidden overflow-hidden transition-all duration-300 ${
+//             mobileMenuOpen
+//               ? "max-h-[500px] opacity-100"
+//               : "max-h-0 opacity-0"
+//           }`}
+//         >
+//           <div className="px-6 pb-6 pt-2 bg-white border-t border-gray-200 flex flex-col gap-5">
+//             <button className="flex items-center justify-between text-base font-medium text-[#0c234a]">
+//               Products
+//               <ChevronDown size={18} />
+//             </button>
+
+//             <Link
+//               href="#"
+//               className="text-base font-medium text-[#0c234a]"
+//             >
+//               Pricing
+//             </Link>
+
+//             <Link
+//               href="#"
+//               className="text-base font-medium text-[#0c234a]"
+//             >
+//               Partners
+//             </Link>
+
+//             <button className="flex items-center justify-between text-base font-medium text-[#0c234a]">
+//               Resources
+//               <ChevronDown size={18} />
+//             </button>
+
+//             {/* Mobile Buttons */}
+//             <div className="flex flex-col gap-3 pt-3">
+//               <button className="bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold px-5 py-3 rounded-xl transition">
+//                 Free Sign up
+//               </button>
+
+//               <button className="bg-[#0c234a] hover:bg-[#08172f] text-white text-base font-semibold px-5 py-3 rounded-xl transition">
+//                 Login
+//               </button>
+//             </div>
+
+//             {/* Language */}
+//             <div className="flex items-center gap-2 pt-2">
+//               <div className="w-6 h-6 rounded-full overflow-hidden border">
+//                 <Image
+//                   src={Logo1}
+//                   alt="English"
+//                   width={24}
+//                   height={24}
+//                 />
+//               </div>
+
+//               <span className="text-sm font-medium text-gray-700">
+//                 EN
+//               </span>
+//             </div>
+//           </div>
+//         </div>
+//       </nav>
+//     </header>
+//   );
+// }
 "use client";
 
 import Image from "next/image";
 import Link from "next/link";
 import { ChevronDown, Menu, X } from "lucide-react";
 import { useState } from "react";
-import Logo1 from "@/public/logo1.webp"
+
+import Logo1 from "@/public/logo1.webp";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="w-full shadow-sm border-b border-gray-200">
+    <header className="w-full border-b border-gray-200 shadow-sm">
+
       {/* Top Banner */}
       <div className="bg-green-500 text-white text-xs sm:text-sm md:text-base font-medium">
         <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-center gap-2 text-center">
+
           <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
             📈
           </div>
 
           <p>
-            Launching Inbound 360 | The tool behind our journey to 523 demos
-            and a $1.5M pipeline.
+            Launching Inbound 360 | The tool behind our journey
+            to 523 demos and a $1.5M pipeline.
           </p>
+
         </div>
       </div>
 
       {/* Navbar */}
-      <nav className="bg-[#f4f4f4] relative z-50"  data-aos="fade-down">
+      <nav className="bg-[#f4f4f4] sticky top-0 z-50">
+
         <div className="max-w-7xl mx-auto px-5 lg:px-8 h-[82px] flex items-center justify-between">
+
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
+
             <div className="relative w-11 h-11 sm:w-12 sm:h-12">
+
               <div className="absolute top-0 left-0 w-5 h-5 sm:w-6 sm:h-6 bg-blue-600 rounded-tl-2xl rounded-br-2xl"></div>
+
               <div className="absolute top-0 right-0 w-3 h-3 sm:w-4 sm:h-4 bg-blue-600 rounded-md"></div>
+
               <div className="absolute bottom-0 left-0 w-3 h-3 sm:w-4 sm:h-4 bg-blue-600 rounded-md"></div>
+
               <div className="absolute bottom-0 right-0 w-5 h-5 sm:w-6 sm:h-6 bg-[#0c234a] rounded-tl-2xl rounded-br-2xl"></div>
+
             </div>
 
             <h1 className="text-3xl sm:text-4xl font-bold text-[#0c234a] tracking-tight">
               GoZen
             </h1>
+
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden lg:flex items-center gap-14">
+
             <button className="flex items-center gap-1 text-lg font-medium text-[#0c234a] hover:text-blue-600 transition">
               Products
               <ChevronDown size={18} />
@@ -281,10 +466,12 @@ export default function Navbar() {
               Resources
               <ChevronDown size={18} />
             </button>
+
           </div>
 
           {/* Desktop Buttons */}
           <div className="hidden lg:flex items-center gap-4">
+
             <button className="bg-blue-600 hover:bg-blue-700 text-white text-lg font-semibold px-7 py-3 rounded-2xl transition duration-300 shadow-md">
               Free Sign up
             </button>
@@ -295,6 +482,7 @@ export default function Navbar() {
 
             {/* Language */}
             <div className="flex items-center gap-2 text-gray-700">
+
               <div className="w-7 h-7 rounded-full overflow-hidden border">
                 <Image
                   src={Logo1}
@@ -305,8 +493,12 @@ export default function Navbar() {
                 />
               </div>
 
-              <span className="text-lg font-medium">EN</span>
+              <span className="text-lg font-medium">
+                EN
+              </span>
+
             </div>
+
           </div>
 
           {/* Mobile Hamburger */}
@@ -314,19 +506,26 @@ export default function Navbar() {
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             className="lg:hidden text-[#0c234a]"
           >
-            {mobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
+            {
+              mobileMenuOpen
+                ? <X size={32} />
+                : <Menu size={32} />
+            }
           </button>
+
         </div>
 
         {/* Mobile Menu */}
         <div
-          className={`lg:hidden overflow-hidden transition-all duration-300 ${
+          className={`lg:hidden absolute top-[82px] left-0 w-full bg-white z-[999] shadow-lg transition-all duration-300 overflow-hidden ${
             mobileMenuOpen
-              ? "max-h-[500px] opacity-100"
-              : "max-h-0 opacity-0"
+              ? "max-h-screen opacity-100 py-6"
+              : "max-h-0 opacity-0 py-0"
           }`}
         >
-          <div className="px-6 pb-6 pt-2 bg-white border-t border-gray-200 flex flex-col gap-5">
+
+          <div className="flex flex-col gap-5 px-6">
+
             <button className="flex items-center justify-between text-base font-medium text-[#0c234a]">
               Products
               <ChevronDown size={18} />
@@ -352,18 +551,21 @@ export default function Navbar() {
             </button>
 
             {/* Mobile Buttons */}
-            <div className="flex flex-col gap-3 pt-3">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white text-base font-semibold px-5 py-3 rounded-xl transition">
+            <div className="flex flex-col gap-3 pt-4">
+
+              <button className="bg-blue-600 text-white text-base font-semibold px-5 py-3 rounded-xl">
                 Free Sign up
               </button>
 
-              <button className="bg-[#0c234a] hover:bg-[#08172f] text-white text-base font-semibold px-5 py-3 rounded-xl transition">
+              <button className="bg-[#0c234a] text-white text-base font-semibold px-5 py-3 rounded-xl">
                 Login
               </button>
+
             </div>
 
             {/* Language */}
             <div className="flex items-center gap-2 pt-2">
+
               <div className="w-6 h-6 rounded-full overflow-hidden border">
                 <Image
                   src={Logo1}
@@ -376,10 +578,15 @@ export default function Navbar() {
               <span className="text-sm font-medium text-gray-700">
                 EN
               </span>
+
             </div>
+
           </div>
+
         </div>
+
       </nav>
+
     </header>
   );
 }
